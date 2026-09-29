@@ -1,0 +1,32 @@
+<idea-plugin>
+    <id>com.github.senocak.prreview</id>
+    <name>LiteLLM PR Review</name>
+    <vendor>LiteLLM PR Review</vendor>
+    <description><![CDATA[
+        Reads the active project's Git remotes to work out which on-premise Bitbucket Server
+        repository you are standing in, lists that repository's open pull requests in a tool
+        window, and sends a pull request's unified diff to a LiteLLM proxy for a code review.
+        The review is rendered in place, next to the list it came from.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.vcs</depends>
+    <!-- Git4Idea supplies GitRepositoryManager. Without it the tool window has nothing to
+         resolve repository coordinates from, so it is a hard dependency rather than optional. -->
+    <depends>Git4Idea</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable
+                parentId="tools"
+                id="com.github.senocak.prreview.settings"
+                displayName="LiteLLM PR Review"
+                instance="com.github.senocak.prreview.PluginSettingsConfigurable"/>
+        <notificationGroup id="LiteLLM PR Review" displayType="BALLOON" isLogByDefault="true"/>
+        <!-- The id must stay in step with PR_TOOL_WINDOW_ID: it is the ActionToolbar place, and
+             anything looking the window up goes through the same constant. -->
+        <toolWindow id="LiteLLM PR Review"
+                    anchor="left"
+                    icon="/icons/prReview.svg"
+                    factoryClass="com.github.senocak.prreview.PRToolWindowFactory"/>
+    </extensions>
+</idea-plugin>
