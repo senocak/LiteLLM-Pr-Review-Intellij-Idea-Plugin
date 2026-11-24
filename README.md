@@ -56,6 +56,3 @@ Please generate the complete, self-contained project code files with no placehol
 5. `BitbucketServerClient.kt`: Network calls to Bitbucket Server.
 6. `LiteLLMClient.kt`: Network calls to LiteLLM.
 7. `PRToolWindowFactory.kt` & `PRMainPanel.kt`: Complete Swing/IntelliJ UI layout, action listeners, background tasks, and error handling dialogs.
-
-
-opencode -s ses_f211796dcffe3I0m6KLF76U7Ek
