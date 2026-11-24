@@ -1,0 +1,19 @@
+README.md
+  s_6d94905918a21e::t_f6995f566d0a57 1-230
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9402506b8fc6412267ef09eb960f2d7117cbb933",
+  "prompts": {},
+  "sessions": {
+    "s_6d94905918a21e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a20cb2-b525-7780-9f80-12560fd658e4",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "TURKCELL\\TCASENOCAK <anil.senocak@turkcell.com.tr>"
+    }
+  }
+}
